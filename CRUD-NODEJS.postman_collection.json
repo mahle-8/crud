@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "5b99f658-4991-4607-b658-1cdd577d0380",
+		"name": "CRUD-NODEJS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45582416",
+		"_collection_link": "https://aldair-7351256.postman.co/workspace/Aldair's-Workspace~b37ba6b0-8a89-4ea2-896d-fd475e2da096/collection/45582416-5b99f658-4991-4607-b658-1cdd577d0380?action=share&source=collection_link&creator=45582416"
+	},
+	"item": [
+		{
+			"name": "apiUser",
+			"item": [
+				{
+					"name": "get",
+					"item": [
+						{
+							"name": "showActive",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjUsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tIiwic3RhdHVzIjoxLCJhcGlfdXNlcl9pZCI6MTUsImlhdCI6MTc1MDQ1MTkyOCwiZXhwIjoxNzUwNDU1NTI4fQ.MXTG0WKYnAyttv45koZRuI7xJKaiNyybtnOUYGndbOI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/apiUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"apiUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjUsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tIiwic3RhdHVzIjoxLCJhcGlfdXNlcl9pZCI6MTUsImlhdCI6MTc1MDQ1MTkyOCwiZXhwIjoxNzUwNDU1NTI4fQ.MXTG0WKYnAyttv45koZRuI7xJKaiNyybtnOUYGndbOI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/apiUser/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"apiUser",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "post",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user\",\r\n  \"email\": \"nuevo_api@mail.com\",\r\n  \"password_hash\": \"12345678\",\r\n  \"status_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/apiUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"apiUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tIiwic3RhdHVzIjoxLCJhcGlfdXNlcl9pZCI6MTQsImlhdCI6MTc1MDQ0MzA0NiwiZXhwIjoxNzUwNDQ2NjQ2fQ.ssRXMRM3hRvWgzXmMIunOu_0A4y9o14OmRjw5k_OfwM",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "application/json",
+										"description": "\"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTcsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tIiwic3RhdHVzIjoxLCJhcGlfdXNlcl9pZCI6MTMsImlhdCI6MTc1MDQzOTg5MCwiZXhwIjoxNzUwNDQzNDkwfQ.YIHQXRgVjsZoa56EuVgms6cmT_nfKm44wkhvKZykg4s\"",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"user\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/apiLogin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"apiLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjUsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tIiwic3RhdHVzIjoxLCJhcGlfdXNlcl9pZCI6MTUsImlhdCI6MTc1MDQ1MTkyOCwiZXhwIjoxNzUwNDU1NTI4fQ.MXTG0WKYnAyttv45koZRuI7xJKaiNyybtnOUYGndbOI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/apiUser/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"apiUser",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "put",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjUsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tIiwic3RhdHVzIjoxLCJhcGlfdXNlcl9pZCI6MTUsImlhdCI6MTc1MDQ1MTkyOCwiZXhwIjoxNzUwNDU1NTI4fQ.MXTG0WKYnAyttv45koZRuI7xJKaiNyybtnOUYGndbOI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"nuevo_nombre\",\r\n  \"passwordHash\": \"$2b$10$abc123...\",\r\n  \"isActive\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/apiUser/15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"apiUser",
+										"15"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "webUser",
+			"item": [
+				{
+					"name": "get",
+					"item": [
+						{
+							"name": "showActive",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tMSIsInN0YXR1cyI6MSwid2ViX3VzZXJfaWQiOjMsImlhdCI6MTc1MDQ1MTc0MiwiZXhwIjoxNzUwNDU1MzQyfQ.LVPaYUaPJ1Bl67U8Z9RMPfrkDOWVOstT5RhAtwyY2vg",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/web/webUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"webUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tMSIsInN0YXR1cyI6MSwid2ViX3VzZXJfaWQiOjIsImlhdCI6MTc1MDQ1MDAwNywiZXhwIjoxNzUwNDUzNjA3fQ.IKoQLMQVvcYFRMVXbUllt7gYtc0rmYpbECJAhMIOGfI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/web/webUser/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"webUser",
+										"2"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "post",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user1a\",\r\n  \"email\": \"nuevo_api@mail.com1\",\r\n  \"password_hash\": \"12345678\",\r\n  \"status_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/web/webUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"webUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"user1a\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/web/webLogin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"webLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/type/apiUser/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"type",
+										"apiUser",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "put",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"nuevo_nombre\",\r\n  \"passwordHash\": \"$2b$10$abc123...\",\r\n  \"isActive\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/type/apiUser/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"type",
+										"apiUser",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "documentType",
+			"item": [
+				{
+					"name": "get",
+					"item": [
+						{
+							"name": "showActive",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjQsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tMSIsInN0YXR1cyI6MSwid2ViX3VzZXJfaWQiOjMsImlhdCI6MTc1MDQ1MjI0OSwiZXhwIjoxNzUwNDU1ODQ5fQ.OYT2dZng4yfowQD2nwdrWKutV-RirIN-gXzMJUVmTZc",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/web/documentType",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"documentType"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "findById",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjIsImVtYWlsIjoibnVldm9fYXBpQG1haWwuY29tMSIsInN0YXR1cyI6MSwid2ViX3VzZXJfaWQiOjIsImlhdCI6MTc1MDQ1MDAwNywiZXhwIjoxNzUwNDUzNjA3fQ.IKoQLMQVvcYFRMVXbUllt7gYtc0rmYpbECJAhMIOGfI",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/web/documentType/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"documentType",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "post",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"user1a\",\r\n  \"email\": \"nuevo_api@mail.com1\",\r\n  \"password_hash\": \"12345678\",\r\n  \"status_id\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/web/webUser",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"webUser"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": \"user1a\",\r\n    \"password\": \"12345678\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/web/webLogin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"web",
+										"webLogin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "delete",
+					"item": [
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/type/apiUser/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"type",
+										"apiUser",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "put",
+					"item": [
+						{
+							"name": "Register",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"username\": \"nuevo_nombre\",\r\n  \"passwordHash\": \"$2b$10$abc123...\",\r\n  \"isActive\": 1\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/type/apiUser/12",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"type",
+										"apiUser",
+										"12"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
