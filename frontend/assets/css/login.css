@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+body {
+  background-color: #f5f5f5;
+  font-family: "Funnel Display", sans-serif;
+}
+
+/* Posición del contenedor de login */
+.col-md-6 {
+  margin-top: 14%;
+}
+
+/* Posición de la imagen dentro del contenedor login*/
+.auth-logo {
+  margin-bottom: 15px;
+}
+
+/* Color de botón y olvide contraseña */
+#loginBtn {
+  background-color: #f564a9;
+  border-color: #ea579e;
+  transition: background-color 0.2s;
+}
+
+#loginBtn:hover {
+  background-color: #c54d87;
+}
+
+.text-decoration-none {
+  color: #ea579e;
+}
+
+/* Color del checkbox*/
+.form-check-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  display: flex;
+}
+
+.form-check-label input {
+  display: none;
+}
+
+.checkmark {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  display: inline-block;
+  position: relative;
+  transition: background 0.1s, border-color 0.1s;
+}
+
+/* Mostrar el check */
+.form-check-label input:checked + .checkmark {
+  background-color: #f564a9; 
+  border-color: #ea579e;
+}
+
+.form-check-label input:checked + .checkmark::after{
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

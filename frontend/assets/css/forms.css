@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+:root {
+  --primary-color: #e53888;
+  --secondary-color: #3b1c32;
+  --border-color: #c52d74;
+  --thf-color: #c28191;
+  --accent-color: #e74c3c;
+  --light-color: #FFFDF6;
+  --dark-color: #89375F;
+}
+
+body {
+
+  font-family: "Funnel Display", sans-serif;
+}
+/* Boton añadir */
+#add-button {
+  background-color: var(--primary-color);
+  border-color: var(--border-color);
+}
+/* Colores de la tabla */
+#app-table {
+  --bs-table-bg: var(--secondary-color); 
+  --bs-table-color: var(--light-color) ; 
+}
+
+#app-table thead tr th{
+  background-color: var(--thf-color);  
+  color: var(--light-color) ; ;              
+  font-weight: bold;         
+  padding: 12px 15px;         
+}
+
+#app-table tfoot tr td{
+    background-color: var(--thf-color);  
+    color: var(--light-color) ;            
+}
+/* Botones del modal */
+#send-button{
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#send-button:hover{
+  color: light var(--light-color);
+  background-color: var(--primary-color);
+}
+
+#close-button{
+    background-color: var(--primary-color);
+}

@@ -1,48 +1,98 @@
- body {
-   display: flex;
-   flex-direction: column;
-   min-height: 100vh;
- }
- .sidebar {
-   width: 250px;
-   height: 100vh;
-   position: fixed;
-   left: 0;
-   top: 56px;
-   /* Altura del navbar */
-   transition: all 0.3s;
-   z-index: 1000;
-   overflow-y: auto;
- }
+@import url("https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap");
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Funnel Display", sans-serif;
+  background-color: #fbebf3bb;
+}
 
- .main-content {
-   margin-left: 250px;
-   transition: all 0.3s;
-   flex: 1;
- }
+#barraSuperior {
+  background-color: #e24d95;
+}
 
- .sidebar-collapsed {
-   transform: translateX(-250px);
- }
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 56px;
+  /* Altura del navbar */
+  transition: all 0.3s;
+  z-index: 1000;
+  overflow-y: auto;
+  background-color: #3b1c32 !important;
+}
 
- .content-expanded {
-   margin-left: 0;
- }
+.main-content {
+  margin-left: 250px;
+  transition: all 0.3s;
+  flex: 1;
+}
 
- @media (max-width: 992px) {
-   .sidebar {
-     transform: translateX(-250px);
-   }
+.sidebar-collapsed {
+  transform: translateX(-250px);
+}
 
-   .sidebar.show {
-     transform: translateX(0);
-   }
+.content-expanded {
+  margin-left: 0;
+}
 
-   .main-content {
-     margin-left: 0;
-   }
- }
+#profileModal .modal-dialog {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  margin: 0;
+  transform: none !important;
+}
 
- footer {
-   margin-top: auto;
- }
+#profileModal .modal-content {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#profileModal .btn {
+  padding: 8px 12px;
+  text-align: left;
+}
+
+#button-edit-profile{
+  color: #e24d95;
+  border-color: #e24d95;
+}
+
+#button-edit-profile:hover{
+  color: #f5f5f5;
+  background-color: #C75B7A;
+  border-color: #C75B7A;
+}
+
+#button-logout{
+  color: #670D2F;
+  border-color: #670D2F;
+}
+
+#button-logout:hover{
+  color: #f5f5f5;
+  background-color: #670D2F;
+  border-color: #670D2F;
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    transform: translateX(-250px);
+  }
+
+  .sidebar.show {
+    transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+}
+
+footer {
+  margin-top: auto;
+  background-color: #e24d95;
+}
